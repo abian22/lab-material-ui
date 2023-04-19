@@ -23,26 +23,26 @@ async function digimon() {
 
 function getImage() {
   return digimons.map((d) => (
+    <Card sx={{ width: 300 }} margin="dense" size="small">
     <CardMedia
       margin="dense"
       sx={{ height: 300 }}
       image={d.img}
       title={d.name}
     />
+    </Card>
   ));
   }
 
-
   return (
-      <Card sx={{ maxWidth: 345 }} margin="dense" size="small">
-        {getImage()}
-      <CardContent>
-      </CardContent>
+    <>
+      {getImage()}
+      <CardContent></CardContent>
       <CardActions>
         <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>
       </CardActions>
-    </Card>
+    </>
   );
   }
 
